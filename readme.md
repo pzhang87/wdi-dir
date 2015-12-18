@@ -44,6 +44,7 @@ With that said - I did not make a substantial number of commits, and would not
 have until this very last day. Really wish I would have.
 
 ## Additional Features, Known Issues, Other To-Dos:
+
 * Add a 'Toggle Info' button to each movie via CSS classes
 * Adding a favorite currently redirects to the blank index, considering options
   like hiding the button + flash message, or collapsing the info, etc.
@@ -51,3 +52,4 @@ have until this very last day. Really wish I would have.
   it look more like an AJAX call), event listeners in script.js can be DRY'd up
   since they all need event.preventDefault on their common behavior (object
   constructor?)
+* What to do for "N/A" images?
