@@ -11,6 +11,7 @@ Body-Parser. The front-end was written entirely in plain Javascript.
 ## Installation Instructions
 
 To view locally:
+
 1. Fork and/or clone this repository.
 2. Command line: `npm install --save` to install
 3. Command Line: `node server.js`
