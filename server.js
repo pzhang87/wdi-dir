@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, 'public'))); //missing parens
 
 app.get('/', function(req, res){
-  res.render('/index.html');
+  res.redirect('/index.html');
 })
 
 // this is the route for favorites, but we aren't using it here
@@ -37,6 +37,13 @@ app.post('/favorites', function(req, res){//shouldn't this be a post request?
     res.redirect('/');
   });
 
-app.listen(4000, function(){ //corrected to app.listen(), changed to 4000 temporarily
-  console.log("Listening on port 4000");
+//needed for heroku
+
+var port = process.env.PORT || 4000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
+
+app.listen(port, function(){ //corrected to app.listen()
+  console.log("Listening on port "+port);
 });
