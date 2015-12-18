@@ -10,6 +10,10 @@ app.use(bodyParser.json());
 
 app.use('/', express.static(path.join(__dirname, 'public'))); //missing parens
 
+app.get('/', function(req, res){
+  res.render('/index.html');
+})
+
 // this is the route for favorites, but we aren't using it here
 app.get('/favorites', function(req, res){
   var data = fs.readFileSync('./data.json');
