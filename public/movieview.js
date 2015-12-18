@@ -2,6 +2,9 @@
 
 function generateMovieList(response, output){
   output.innerHTML = ""
+
+  //since this function is being used for both omdb and internal API calls, we need
+  //to add a way to format the response based on what's being called
   var movies = [];
     if (response.Search) {
       movies = response.Search
@@ -10,6 +13,7 @@ function generateMovieList(response, output){
       movies = response
     };
 
+  //loop through the response and generate the HTML
   for (var i = 0; i < movies.length; i++){
     var movie = movies[i]
     output.innerHTML +=
@@ -23,6 +27,7 @@ function generateMovieList(response, output){
   }
 }
 
+//this makes the info partial for the single API call 
 function generateMovieInfo(response, target){
   console.log(target)
   target.innerHTML =
