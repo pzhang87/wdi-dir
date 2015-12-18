@@ -40,9 +40,6 @@ app.post('/favorites', function(req, res){//shouldn't this be a post request?
 //needed for heroku
 
 var port = process.env.PORT || 4000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
 
 app.listen(port, function(){ //corrected to app.listen()
   console.log("Listening on port "+port);
